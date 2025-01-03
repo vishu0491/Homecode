@@ -26,32 +26,32 @@ public class TestCase13 {
 		String alerttext = alert.getText();
 		
 		// ok
-		System.out.println(alerttext);
-		alert.accept();
-		if(changeAlert.getText().equals("You pressed OK!")) {
-			System.out.println("Test Case passed...");
-		}
-		else {
-			System.out.println("Test case failed");
-		}
-		
-		
-		// cancele 
-		
-		driver.findElement(By.id("button4"));
-		alert = driver.switchTo().alert();
-		alert.dismiss();
-		
-		if(changeAlert.getText().equals("You pressed OK!")) {
-			System.out.println("Test case passed");
-		}
-		
-		else {
-			System.out.println("Test case failed ");
-		}
-		
-		
-		
+	      /// ok
+		    // verify the alert text
+		       
+		       String alerttext1 =alert.getText();
+		       System.out.println(alerttext1);
+		       alert.accept();
+		       
+		       
+	          if(changeAlert.getText().equals("You pressed OK!")) {
+	        	  System.out.println("Test Case passed");
+	          }
+	          else {
+	        	  System.out.println("Test Case Failed");
+	          }
+	          
+	          // cnacel 
+	          
+	      	// cancel
+	  		driver.findElement(By.id("button4")).click();
+	  		alert = driver.switchTo().alert();
+	  		alert.dismiss();
+	  		if(changeAlert.getText().equals("You pressed Cancel!")) {
+	  			System.out.println("Test case pass ...");
+	  		}
+	  		
+		       
 		
 
 	}
